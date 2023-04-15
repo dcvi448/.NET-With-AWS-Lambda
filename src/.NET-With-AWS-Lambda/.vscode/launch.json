@@ -1,0 +1,22 @@
+{
+    "name": "AWS Lambda (.NET Core)",
+    "type": "aws-sam",
+    "request": "direct-invoke",
+    "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/src/.NET-With-AWS-Lambda"
+    },
+    "lambda": {
+        "runtime": "net6.0",
+        "handler": "AWSLambda.Function::AWSLambda.Function.FunctionHandler",
+        "payloadFile": "${workspaceFolder}/test-event.json"
+    },
+    "aws": {
+        "credentials": "default",
+        "region": "ap-southeast-1"
+    },
+    "justMyCode": false,
+    "configurations": [
+    
+    ]
+}
